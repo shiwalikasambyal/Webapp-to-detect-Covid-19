@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test yourself</title>
+   
+    <style>
+        button{
+            font-size: 50px;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+        #container
+        {
+            text-align: center;
+            
+            left: 40%;
+            top: 40%
+        }
+        #btntwo
+        {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body background="C:\Users\computer world\Desktop\link webapp to html\images\bg10.jpg"></body>
+<body style= " background-size: 100%; background-repeat: no-repeat;">
+    <div id="container">
+    <h1 text-align="center"> Welcome <span id="result-name1"></span>!!!!!!!!</h1>
+</div>
+    <h2> 
+        Name: <span id="result-name"></span> <br>
+
+        Age: <span id="result-age"></span></br>
+        Gender: <span id="result-gender"></span><br>
+        Date: <span id="result-Date"></span></br>
+       Phone No. <span id="result-number"></span></br>
+    </h2>
+    <script>
+        document.getElementById("result-name").innerHTML=sessionStorage.getItem("textvalue1");
+        document.getElementById("result-name1").innerHTML=sessionStorage.getItem("textvalue1");
+        document.getElementById("result-age").innerHTML=sessionStorage.getItem("textvalue2");
+        document.getElementById("result-gender").innerHTML=sessionStorage.getItem("textvalue3");
+       
+        document.getElementById("result-Date").innerHTML=sessionStorage.getItem("textvalue4");
+        document.getElementById("result-number").innerHTML=sessionStorage.getItem("textvalue5");
+    </script>
+    <div class="content">
+        <nav>
+            <div class="logo"> <h1 style="font-size: 30px;text-align: center; color: rgb(10, 78, 78);"> Choose Modality </h1> </div>
+            
+            </div>
+        </nav>
+        <main> 
+            <div id="container">
+                <a href="http://127.0.0.1:5000">
+                <button id="btnone">X-Ray</button>
+            </a>
+            </div>
+            <div id="container">
+                <a href="http://127.0.0.1:8000">
+                <button id="btnone">CT-Scan</button>
+            </a>
+            </div>
+            
+      </main>
+   
+      </body>
+    </html>

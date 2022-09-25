@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<script>
+		function passvalue()
+		{
+			var fname=document.getElementById("uname").value;
+			sessionStorage.setItem("textvalue1",fname);
+			var fage=document.getElementById("Uage").value;
+			sessionStorage.setItem("textvalue2",fage);
+			var fgender=document.getElementById("gender").value;
+			sessionStorage.setItem("textvalue3",fgender);
+			var fDate=document.getElementById("Date").value;
+			sessionStorage.setItem("textvalue4",fDate);
+			var fname=document.getElementById("uname").value;
+			sessionStorage.setItem("textvalue11",fname);
+			var fage=document.getElementById("Uage").value;
+			sessionStorage.setItem("textvalue12",fage);
+			var fgender=document.getElementById("gender").value;
+			sessionStorage.setItem("textvalue13",fgender);
+			var fDate=document.getElementById("Date").value;
+			sessionStorage.setItem("textvalue14",fDate);
+			var fnumber=document.getElementById("number").value;
+			sessionStorage.setItem("textvalue5",fnumber);
+		
+			return false
+		}
+	</script>
+
+	<style>
+		.bg-image {
+			background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+		}
+	</style>
+	<link rel="stylesheet" type="text/css"
+		href="C:\\Users\\computer world\\Desktop\\link webapp to html\\static\\CSS\\style.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+</head>
+
+<body>
+
+	<header>
+
+		<nav>
+			<div class="logo">
+				<h1 style="font-size: 30px;"> COVID-19 DETECTION </h1>
+			</div>
+			<div class="menu">
+				<a href="#" style="font-size: 30px">Home</a>
+				<a href="gallery.html">gallery</a>
+				<a href="C:\\Users\\computer world\\Desktop\\link webapp to html\\templates\\about_ka_page.html">about</a>
+				<a href="https://covid19.who.int/">contact</a>
+			</div>
+		</nav>
+
+		<main>
+			<section>
+				<h2>Combating Covid-19 with AI</h2>
+				<h1><span class="change_content"> </span> <span style="margin-top: -10px;"> </span> </h1>
+				<p>"DETECTION -> ISOLATION -> PREVENTION"</p>
+				<h2>
+					<p>"#TESTING_FOR_ALL"</p>
+				</h2>
+				<a href="learn_more.html" class="btnone">learn more</a>
+
+				<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Signup
+					here</button>
+			</section>
+		</main>
+		<div id="id01" class="modal">
+           {% extends "base.html"%}
+		   {% block content%}
+			<form  id="form" class="modal-content animate" action="print_report.html" method="POST">
+
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close"
+						title="Close Modal">&times;</span>
+					<img src="C:\\Users\\computer world\\Desktop\\link webapp to html\\images\\images.png" width="20"
+						height="200" alt="Avatar" class="avatar">
+				</div>
+
+				<div class="container">
+					<label for="uname"><b>Name</b></label>
+					<input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+
+					<label for="Uage"><b>Age</b></label>
+					<input type="text" id="Uage" placeholder="Enter Age" name="Uage" required>
+                 <div>
+					<label for="gender">  
+						Gender:   
+						</label>  <br>  
+						<input type="radio" id="gender" name="gender" value="male"/> Male    
+						<br>  
+						<input type="radio" id="gender" name="gender" value="female" checked/> Female <br/>
+					</div>
+					<label for="Date"><br><b>Date</b><br></label>
+					<input type="date" id="Date" name="Date" required>
+
+					<label for="number"><br><b>Phone No.</b><br></label>
+					<input type="tel" id="number" name="number" pattern="[0-9]{10}" required><br>
+
+
+					<input type="submit" value="Signup" onclick="passvalue();" />
+					
+
+
+				</div>
+		</div>
+		</form>
+		 
+		<script>
+			// Get the modal
+			var modal = document.getElementById('id01');
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function (event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+
+
+		</div>
+		</section>
+
+
+
+	</header>
+
+</body>
+
+</html>

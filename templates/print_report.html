@@ -1,0 +1,71 @@
+<html>
+
+<head>
+
+    <title>
+        SignUp
+    </title>
+    <style>
+        #container {
+            text-align: center;
+
+            left: 40%;
+            top: 40%
+        }
+
+        button {
+            width: 100%;
+            font-size: 50px;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px;
+            top: 50%;
+            left: 50%;
+            background-color: white;
+            color: black;
+
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+
+<body background="C:\\Users\\computer world\\Desktop\\link webapp to html\\images\\bg10.jpg"></body>
+
+<body style=" background-size: 100%; background-repeat: no-repeat;">
+    <div id="container">
+        <h1>Congratulations! Signup Sucessfull..</h1>
+    </div>
+    <h2>
+        Name: <span id="result-name"></span> </br>
+
+        Age: <span id="result-age"></span></br>
+        Gender: <span id="result-gender"></span></br>
+        Date: <span id="result-Date"></span></br>
+        Phone No.: <span id="result-number"></span></br>
+
+    </h2>
+    <div class="center">
+        <a href="submit.html" class="btnone">
+            <button>Get ready for the test</button>
+        </a>
+    </div>
+    <script>
+
+        document.getElementById("result-name").innerHTML = sessionStorage.getItem("textvalue1");
+        document.getElementById("result-age").innerHTML = sessionStorage.getItem("textvalue2");
+        document.getElementById("result-gender").innerHTML = sessionStorage.getItem("textvalue3");
+        document.getElementById("result-Date").innerHTML = sessionStorage.getItem("textvalue4");
+        document.getElementById("result-number").innerHTML = sessionStorage.getItem("textvalue5");
+    </script>
+
+</body>
+
+</html>
